@@ -1,8 +1,8 @@
 /**
- * [Exercise 1] trimProperties copies an object trimming its properties
  * @param {object} obj - an object with properties that are strings
  * @returns {object} - a copy of the object with strings trimmed
  *
+ * [Exercise 1] trimProperties copies an object trimming its properties
  * EXAMPLE
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
@@ -93,8 +93,8 @@ class Car {
    * @param {number} mpg - miles the car can drive per gallon of gas
    */
   constructor(name, tankSize, mpg) {
-    this.odometer = 0 // car initilizes with zero miles
-    this.tank = tankSize // car initiazes full of gas
+    this.odometer = 0; // car initilizes with zero miles
+    this.tank = tankSize; // car initiazes full of gas
     // ✨ initialize whatever other properties are needed
   }
 
@@ -156,4 +156,4 @@ module.exports = {
   Counter,
   Seasons,
   Car,
-}
+};

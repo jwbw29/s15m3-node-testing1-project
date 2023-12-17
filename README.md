@@ -8,11 +8,14 @@ Your assignment page on Canvas should contain instructions for submitting this p
 
 <!-- [x] Complete above this line -->
 
+<!--
 ### Task 2: Minimum Viable Product
+[x] First, Inside index.test.js, turn all the tests in to todos
 
-- [ ] For Exercises 1-7 inside `index.js`:
-  - [ ] Write the tests in `index.test.js`.
-  - [ ] Implement the function or the class in `index.js`.
+[ ] For Exercises 1-7 inside `index.js`:
+  [ ] Write the tests in `index.test.js`.
+  [ ] Implement the function or the class in `index.js`.
+ -->
 
 #### Notes
 
