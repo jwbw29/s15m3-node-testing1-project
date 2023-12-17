@@ -1,17 +1,21 @@
 /**
+ * [ ] [Exercise 1] trimProperties copies an object trimming its properties
  * @param {object} obj - an object with properties that are strings
  * @returns {object} - a copy of the object with strings trimmed
  *
- * [Exercise 1] trimProperties copies an object trimming its properties
  * EXAMPLE
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
   // ✨ implement
+  for (let prop in obj) {
+    obj[prop] = obj[prop].trim();
+  }
+  return obj;
 }
 
 /**
- * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
+ * [ ] [Exercise 2] t5rimPropertiesMutation trims in place the properties of an object
  * @param {object} obj - an object with properties that are strings
  * @returns {object} - the same object with strings trimmed
  *
@@ -23,7 +27,7 @@ function trimPropertiesMutation(obj) {
 }
 
 /**
- * [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
+ * [ ] [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
  * @param {object[]} integers - an array of objects
  * @returns {number} - the largest integer
  *
@@ -36,7 +40,7 @@ function findLargestInteger(integers) {
 
 class Counter {
   /**
-   * [Exercise 4A] Counter creates a counter
+   * [ ] [Exercise 4A] Counter creates a counter
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
@@ -44,7 +48,7 @@ class Counter {
   }
 
   /**
-   * [Exercise 4B] Counter.prototype.countDown counts down to zero
+   * [ ] [Exercise 4B] Counter.prototype.countDown counts down to zero
    * @returns {number} - the next count, does not go below zero
    *
    * EXAMPLE
@@ -62,14 +66,14 @@ class Counter {
 
 class Seasons {
   /**
-   * [Exercise 5A] Seasons creates a seasons object
+   * [ ] [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
     // ✨ initialize whatever properties are needed
   }
 
   /**
-   * [Exercise 5B] Seasons.prototype.next returns the next season
+   * [ ] [Exercise 5B] Seasons.prototype.next returns the next season
    * @returns {string} - the next season starting with "summer"
    *
    * EXAMPLE
@@ -87,7 +91,7 @@ class Seasons {
 
 class Car {
   /**
-   * [Exercise 6A] Car creates a car object
+   * [ ] [Exercise 6A] Car creates a car object
    * @param {string} name - the name of the car
    * @param {number} tankSize - capacity of the gas tank in gallons
    * @param {number} mpg - miles the car can drive per gallon of gas
@@ -99,7 +103,7 @@ class Car {
   }
 
   /**
-   * [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
+   * [ ] [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
    * @param {string} distance - the distance we want the car to drive
    * @returns {number} - the updated odometer value
    *
@@ -116,7 +120,7 @@ class Car {
   }
 
   /**
-   * [Exercise 6C] Adds gallons to the tank
+   * [ ] [Exercise 6C] Adds gallons to the tank
    * @param {number} gallons - the gallons of fuel we want to put in the tank
    * @returns {number} - the miles that can be driven after refueling
    *
@@ -132,7 +136,7 @@ class Car {
 }
 
 /**
- * [Exercise 7] Asynchronously resolves whether a number is even
+ * [ ] [Exercise 7] Asynchronously resolves whether a number is even
  * @param {number} number - the number to test for evenness
  * @returns {promise} - resolves true if number even, false otherwise
  *
