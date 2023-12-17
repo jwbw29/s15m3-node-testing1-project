@@ -6,6 +6,8 @@
 
 Your assignment page on Canvas should contain instructions for submitting this project. If you are still unsure, reach out to School Staff.
 
+<!-- [x] Complete above this line -->
+
 ### Task 2: Minimum Viable Product
 
 - [ ] For Exercises 1-7 inside `index.js`:
