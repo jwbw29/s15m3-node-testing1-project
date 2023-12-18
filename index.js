@@ -119,9 +119,9 @@ class Seasons {
   }
 }
 
+// [ ] [Exercise 6A] Car creates a car object
 class Car {
   /**
-   * [ ] [Exercise 6A] Car creates a car object
    * @param {string} name - the name of the car
    * @param {number} tankSize - capacity of the gas tank in gallons
    * @param {number} mpg - miles the car can drive per gallon of gas
@@ -130,56 +130,67 @@ class Car {
     this.odometer = 0; // car initializes with zero miles
     this.tank = tankSize; // car initializes full of gas
     this.tankSize = tankSize;
+    this.mpg = mpg;
     // ✨ initialize whatever other properties are needed
   }
 
-  /**
-   * [ ] [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
-   * @param {string} distance - the distance we want the car to drive
-   * @returns {number} - the updated odometer value
-   *
-   * EXAMPLE
-   * const focus = new Car('focus', 20, 30)
-   * focus.drive(100) // returns 100
-   * focus.drive(100) // returns 200
-   * focus.drive(100) // returns 300
-   * focus.drive(200) // returns 500
-   * focus.drive(200) // returns 600 (ran out of gas after 100 miles)
-   */
+  // [ ] [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
   drive(distance) {
+    /**
+     * @param {string} distance - the distance we want the car to drive
+     * @returns {number} - the updated odometer value
+     *
+     * EXAMPLE
+     * const focus = new Car('focus', 20, 30)
+     * focus.drive(100) // returns 100
+     * focus.drive(100) // returns 200
+     * focus.drive(100) // returns 300
+     * focus.drive(200) // returns 500
+     * focus.drive(200) // returns 600 (ran out of gas after 100 miles)
+     */
     // ✨ implement
+    const milesCanDrive = this.tank * this.mpg;
+    if (distance <= milesCanDrive) {
+      this.odometer = this.odometer + distance;
+      this.tank = this.tank - distance / this.mpg;
+      return this.odometer;
+    }
+    this.odometer = this.odometer + milesCanDrive;
+    this.tank = 0;
+
+    return this.odometer;
   }
 
-  /**
-   * [ ] [Exercise 6C] Adds gallons to the tank
-   * @param {number} gallons - the gallons of fuel we want to put in the tank
-   * @returns {number} - the miles that can be driven after refueling
-   *
-   * EXAMPLE
-   * const focus = new Car('focus', 20, 30)
-   * focus.drive(600) // returns 600
-   * focus.drive(1) // returns 600 (no distance driven as tank is empty)
-   * focus.refuel(99) // returns 600 (tank only holds 20)
-   */
+  // [ ] [Exercise 6C] Adds gallons to the tank
   refuel(gallons) {
+    /**
+     * @param {number} gallons - the gallons of fuel we want to put in the tank
+     * @returns {number} - the miles that can be driven after refueling
+     *
+     * EXAMPLE
+     * const focus = new Car('focus', 20, 30)
+     * focus.drive(600) // returns 600
+     * focus.drive(1) // returns 600 (no distance driven as tank is empty)
+     * focus.refuel(99) // returns 600 (tank only holds 20)
+     */
     // ✨ implement
   }
 }
 
-/**
- * [ ] [Exercise 7] Asynchronously resolves whether a number is even
- * @param {number} number - the number to test for evenness
- * @returns {promise} - resolves true if number even, false otherwise
- *
- * EXAMPLE
- * isEvenNumberAsync(2).then(result => {
- *    // result is true
- * })
- * isEvenNumberAsync(3).then(result => {
- *    // result is false
- * })
- */
+// [ ] [Exercise 7] Asynchronously resolves whether a number is even
 function isEvenNumberAsync(number) {
+  /**
+   * @param {number} number - the number to test for evenness
+   * @returns {promise} - resolves true if number even, false otherwise
+   *
+   * EXAMPLE
+   * isEvenNumberAsync(2).then(result => {
+   *    // result is true
+   * })
+   * isEvenNumberAsync(3).then(result => {
+   *    // result is false
+   * })
+   */
   // ✨ implement
 }
 
