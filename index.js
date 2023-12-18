@@ -160,7 +160,7 @@ class Car {
     return this.odometer;
   }
 
-  // [ ] [Exercise 6C] Adds gallons to the tank
+  // [x] [Exercise 6C] Adds gallons to the tank
   refuel(gallons) {
     /**
      * @param {number} gallons - the gallons of fuel we want to put in the tank
@@ -173,11 +173,18 @@ class Car {
      * focus.refuel(99) // returns 600 (tank only holds 20)
      */
     // ✨ implement
+    const gallonsThatFit = this.tankSize - this.tank;
+    if (gallons <= gallonsThatFit) {
+      this.tank = this.tank + gallons;
+    } else {
+      this.tank = this.tankSize;
+    }
+    return this.tank * this.mpg;
   }
 }
 
 // [ ] [Exercise 7] Asynchronously resolves whether a number is even
-function isEvenNumberAsync(number) {
+async function isEvenNumberAsync(number) {
   /**
    * @param {number} number - the number to test for evenness
    * @returns {promise} - resolves true if number even, false otherwise
@@ -191,6 +198,7 @@ function isEvenNumberAsync(number) {
    * })
    */
   // ✨ implement
+  return number % 2 === 0 || false;
 }
 
 module.exports = {
