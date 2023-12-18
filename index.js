@@ -1,12 +1,12 @@
-/**
- * [x] [Exercise 1] trimProperties copies an object trimming its properties
- * @param {object} obj - an object with properties that are strings
- * @returns {object} - a copy of the object with strings trimmed
- *
- * EXAMPLE
- * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
- */
+// [x] [Exercise 1] trimProperties copies an object trimming its properties
 function trimProperties(obj) {
+  /**
+   * @param {object} obj - an object with properties that are strings
+   * @returns {object} - a copy of the object with strings trimmed
+   *
+   * EXAMPLE
+   * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
+   */
   // ✨ implement
   const result = {};
   for (let prop in obj) {
@@ -15,15 +15,15 @@ function trimProperties(obj) {
   return result;
 }
 
-/**
- * [x] [Exercise 2] trimPropertiesMutation trims in place the properties of an object
- * @param {object} obj - an object with properties that are strings
- * @returns {object} - the same object with strings trimmed
- *
- * EXAMPLE
- * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
- */
+// [x] [Exercise 2] trimPropertiesMutation trims in place the properties of an object
 function trimPropertiesMutation(obj) {
+  /**
+   * @param {object} obj - an object with properties that are strings
+   * @returns {object} - the same object with strings trimmed
+   *
+   * EXAMPLE
+   * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
+   */
   // ✨ implement
   for (let prop in obj) {
     obj[prop] = obj[prop].trim();
@@ -31,15 +31,15 @@ function trimPropertiesMutation(obj) {
   return obj;
 }
 
-/**
- * [x] [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
- * @param {object[]} integers - an array of objects
- * @returns {number} - the largest integer
- *
- * EXAMPLE
- * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
- */
+// [x] [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
 function findLargestInteger(integers) {
+  /**
+   * @param {object[]} integers - an array of objects
+   * @returns {number} - the largest integer
+   *
+   * EXAMPLE
+   * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
+   */
   // ✨ implement
   let largest = integers[0].integer;
   integers.forEach((obj) => {
@@ -62,9 +62,9 @@ function findLargestInteger(integers) {
   // ]
 }
 
+// [x] [Exercise 4A] Counter creates a counter
 class Counter {
   /**
-   * [x] [Exercise 4A] Counter creates a counter
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
@@ -90,27 +90,27 @@ class Counter {
   }
 }
 
+// [ ] [Exercise 5A] Seasons creates a seasons object
 class Seasons {
   /**
-   * [ ] [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
     // ✨ initialize whatever properties are needed
   }
 
-  /**
-   * [ ] [Exercise 5B] Seasons.prototype.next returns the next season
-   * @returns {string} - the next season starting with "summer"
-   *
-   * EXAMPLE
-   * const seasons = new Seasons()
-   * seasons.next() // returns "summer"
-   * seasons.next() // returns "fall"
-   * seasons.next() // returns "winter"
-   * seasons.next() // returns "spring"
-   * seasons.next() // returns "summer"
-   */
+  // [ ] [Exercise 5B] Seasons.prototype.next returns the next season
   next() {
+    /**
+     * @returns {string} - the next season starting with "summer"
+     *
+     * EXAMPLE
+     * const seasons = new Seasons()
+     * seasons.next() // returns "summer"
+     * seasons.next() // returns "fall"
+     * seasons.next() // returns "winter"
+     * seasons.next() // returns "spring"
+     * seasons.next() // returns "summer"
+     */
     // ✨ implement
   }
 }
