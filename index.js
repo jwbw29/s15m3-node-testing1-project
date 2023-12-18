@@ -32,7 +32,7 @@ function trimPropertiesMutation(obj) {
 }
 
 /**
- * [ ] [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
+ * [x] [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
  * @param {object[]} integers - an array of objects
  * @returns {number} - the largest integer
  *
@@ -41,6 +41,25 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  let largest = integers[0].integer;
+  integers.forEach((obj) => {
+    if (obj.integer > largest) {
+      largest = obj.integer;
+    }
+  });
+  return largest;
+  // integers[0].integer === 1
+  // [
+  //   {
+  //     integer: 1
+  //   },
+  //   {
+  //     integer: 3
+  //   },
+  //   {
+  //     integer: 2
+  //   }
+  // ]
 }
 
 class Counter {
