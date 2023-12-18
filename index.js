@@ -153,11 +153,10 @@ class Car {
     if (distance <= milesCanDrive) {
       this.odometer = this.odometer + distance;
       this.tank = this.tank - distance / this.mpg;
-      return this.odometer;
+    } else {
+      this.odometer = this.odometer + milesCanDrive;
+      this.tank = 0;
     }
-    this.odometer = this.odometer + milesCanDrive;
-    this.tank = 0;
-
     return this.odometer;
   }
 
