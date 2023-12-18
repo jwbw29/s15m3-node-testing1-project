@@ -119,8 +119,8 @@ describe("[Exercise 6] Car", () => {
     expect(focus.drive(1)).toBe(600);
     expect(focus.tank).toBe(0);
   });
-  test.todo("[18] adding fuel to a full tank has no effect");
   test.todo("[17] refueling allows to keep driving");
+  test.todo("[18] adding fuel to a full tank has no effect");
 });
 
 describe("[Exercise 7] isEvenNumberAsync", () => {

@@ -119,7 +119,7 @@ class Seasons {
   }
 }
 
-// [ ] [Exercise 6A] Car creates a car object
+// [x] [Exercise 6A] Car creates a car object
 class Car {
   /**
    * @param {string} name - the name of the car
@@ -134,7 +134,7 @@ class Car {
     // ✨ initialize whatever other properties are needed
   }
 
-  // [ ] [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
+  // [x] [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
   drive(distance) {
     /**
      * @param {string} distance - the distance we want the car to drive
