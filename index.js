@@ -1,5 +1,5 @@
 /**
- * [ ] [Exercise 1] trimProperties copies an object trimming its properties
+ * [x] [Exercise 1] trimProperties copies an object trimming its properties
  * @param {object} obj - an object with properties that are strings
  * @returns {object} - a copy of the object with strings trimmed
  *
@@ -16,7 +16,7 @@ function trimProperties(obj) {
 }
 
 /**
- * [ ] [Exercise 2] t5rimPropertiesMutation trims in place the properties of an object
+ * [x] [Exercise 2] trimPropertiesMutation trims in place the properties of an object
  * @param {object} obj - an object with properties that are strings
  * @returns {object} - the same object with strings trimmed
  *
@@ -25,6 +25,10 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (let prop in obj) {
+    obj[prop] = obj[prop].trim();
+  }
+  return obj;
 }
 
 /**
