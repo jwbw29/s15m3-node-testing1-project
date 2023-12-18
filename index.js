@@ -90,15 +90,15 @@ class Counter {
   }
 }
 
-// [ ] [Exercise 5A] Seasons creates a seasons object
+// [x] [Exercise 5A] Seasons creates a seasons object
 class Seasons {
-  /**
-   */
   constructor() {
     // ✨ initialize whatever properties are needed
+    this.seasons = ["summer", "fall", "winter", "spring"];
+    this.currentSeason = 0; //this will map to first position in array
   }
 
-  // [ ] [Exercise 5B] Seasons.prototype.next returns the next season
+  // [x] [Exercise 5B] Seasons.prototype.next returns the next season
   next() {
     /**
      * @returns {string} - the next season starting with "summer"
@@ -112,6 +112,10 @@ class Seasons {
      * seasons.next() // returns "summer"
      */
     // ✨ implement
+    const result = this.seasons[this.currentSeason];
+    this.currentSeason === 3 ? (this.currentSeason = 0) : ++this.currentSeason;
+
+    return result;
   }
 }
 
@@ -123,8 +127,9 @@ class Car {
    * @param {number} mpg - miles the car can drive per gallon of gas
    */
   constructor(name, tankSize, mpg) {
-    this.odometer = 0; // car initilizes with zero miles
-    this.tank = tankSize; // car initiazes full of gas
+    this.odometer = 0; // car initializes with zero miles
+    this.tank = tankSize; // car initializes full of gas
+    this.tankSize = tankSize;
     // ✨ initialize whatever other properties are needed
   }
 
