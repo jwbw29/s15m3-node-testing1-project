@@ -64,15 +64,16 @@ function findLargestInteger(integers) {
 
 class Counter {
   /**
-   * [ ] [Exercise 4A] Counter creates a counter
+   * [x] [Exercise 4A] Counter creates a counter
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.count = initialNumber;
   }
 
   /**
-   * [ ] [Exercise 4B] Counter.prototype.countDown counts down to zero
+   * [x] [Exercise 4B] Counter.prototype.countDown counts down to zero
    * @returns {number} - the next count, does not go below zero
    *
    * EXAMPLE
@@ -85,6 +86,7 @@ class Counter {
    */
   countDown() {
     // ✨ implement
+    return this.count > 0 ? this.count-- : this.count;
   }
 }
 
